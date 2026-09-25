@@ -1,0 +1,5 @@
+<route name="example_convoy" loop="1">
+  <point x="1690" y="0" z="3860" speed="45"/>
+  <point x="1720" y="0" z="3910" speed="20"/>
+  <point x="1760" y="0" z="3950" speed="45"/>
+</route>
