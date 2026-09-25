@@ -1,0 +1,15 @@
+* text=auto eol=lf
+*.c    text eol=lf
+*.cpp  text eol=lf
+*.hpp  text eol=lf
+*.csv  text eol=crlf
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.paa  binary
+*.p3d  binary
+*.rvmat text eol=lf
+*.pbo  binary
+*.wrp  binary
+*.ogg  binary
+*.png  binary
+*.tga  binary

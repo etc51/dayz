@@ -1,0 +1,30 @@
+# Сборка
+/build/
+/out/
+*.pbo
+*.bisign
+*.bikey
+!keys/*.bikey
+
+# DayZ Tools / Workbench
+*.log
+*.rpt
+*.mdmp
+*.bidmp
+*.ADM
+.workbench/
+*.lst
+
+# Сервер (локальные данные)
+server/profiles/
+server/storage_*/
+server/serverDZ.cfg
+
+# ОС / редакторы
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/extensions.json
+.idea/
+__pycache__/

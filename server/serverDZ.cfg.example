@@ -1,0 +1,27 @@
+hostname = "Глобальная Черноруссия | RU";
+password = "";
+passwordAdmin = "CHANGE_ME";
+maxPlayers = 60;
+verifySignatures = 2;
+forceSameBuild = 1;
+disableVoN = 0;
+vonCodecQuality = 20;
+disable3rdPerson = 0;
+disableCrosshair = 0;
+serverTime = "SystemTime";
+serverTimeAcceleration = 4;
+serverNightTimeAcceleration = 8;
+serverTimePersistent = 0;
+guaranteedUpdates = 1;
+loginQueueConcurrentPlayers = 5;
+loginQueueMaxPlayers = 500;
+instanceId = 1;
+storageAutoFix = 1;
+
+class Missions
+{
+	class DayZ
+	{
+		template = "dayzOffline.chernarusplus";
+	};
+};
