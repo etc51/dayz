@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "SessionStart": [
+      { "hooks": [ { "type": "command", "command": "bash tools/sync.sh --pull-only", "timeout": 60 } ] }
+    ],
+    "Stop": [
+      { "hooks": [ { "type": "command", "command": "bash tools/sync.sh", "timeout": 120 } ] }
+    ]
+  }
+}
