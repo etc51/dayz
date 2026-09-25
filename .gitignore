@@ -28,3 +28,20 @@ desktop.ini
 !.vscode/extensions.json
 .idea/
 __pycache__/
+
+# --- Секреты реального проекта: никогда не коммитить ---
+*.biprivatekey
+*.pem
+.env
+.env.*
+*cookie*
+*Cookie*
+
+# --- Тяжёлые артефакты (хранятся локально и в Workshop) ---
+*.zip
+*.7z
+*.rar
+/payload/
+/world-signed/
+node_modules/
+*.ADM
