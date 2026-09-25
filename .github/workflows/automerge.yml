@@ -1,0 +1,36 @@
+name: auto-merge-to-main
+
+# Облачные сессии Claude пушат в ветки claude/*; этот workflow
+# автоматически вливает их в main, чтобы ПК получил изменения при pull.
+on:
+  push:
+    branches: ["claude/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: automerge-main
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Merge into main
+        run: |
+          git config user.name "gc-autosync"
+          git config user.email "gc-autosync@users.noreply.github.com"
+          if ! git ls-remote --exit-code --heads origin main >/dev/null; then
+            echo "Ветки main ещё нет — пропускаю."; exit 0
+          fi
+          git checkout -B main origin/main
+          if ! git merge --no-edit "origin/${GITHUB_REF_NAME}"; then
+            git merge --abort
+            echo "::error::Конфликт ${GITHUB_REF_NAME} -> main, нужно объединить вручную"
+            exit 1
+          fi
+          git push origin main

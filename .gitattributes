@@ -13,3 +13,5 @@
 *.ogg  binary
 *.png  binary
 *.tga  binary
+*.sh   text eol=lf
+*.vbs  text eol=crlf
